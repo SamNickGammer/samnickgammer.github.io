@@ -115,6 +115,14 @@ h6 {
 #header .social-links a:hover {
   background: #1c7d32;
 }
+#backImage {
+  height: 55rem;
+  width: auto;
+  position: absolute;
+  left: 60.7%;
+  filter: drop-shadow(0px -15px 100px rgb(0, 0, 0));
+  z-index: -99999;
+}
 
 @media (max-width: 992px) {
   #header h1 {
@@ -133,6 +141,9 @@ h6 {
     align-items: center;
   }
   .samNickName {
+    display: none;
+  }
+  #backImage {
     display: none;
   }
 }
@@ -288,7 +299,8 @@ h6 {
 }
 
 #header.header-top .social-links,
-#header.header-top h2 {
+#header.header-top h2,
+#header.header-top img {
   display: none;
 }
 
@@ -1094,5 +1106,16 @@ section .container {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .contact .info-box .social-links .noneDis992 {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .contact .info-box .social-links .noneDis1000 {
+    display: none;
   }
 }
