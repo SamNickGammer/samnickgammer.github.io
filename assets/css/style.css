@@ -116,10 +116,10 @@ h6 {
   background: #1c7d32;
 }
 #backImage {
-  height: 55rem;
+  height: 50rem;
   width: auto;
   position: absolute;
-  left: 60.7%;
+  left: 64.2%;
   filter: drop-shadow(0px -15px 100px rgb(0, 0, 0));
   z-index: -99999;
 }
