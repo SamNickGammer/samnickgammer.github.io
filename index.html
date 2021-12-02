@@ -25,6 +25,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link href="./assets/css/contact.css" rel="stylesheet"> -->
 
 </head>
 
@@ -50,19 +51,21 @@
       </nav>
 
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/omprakashbharati" target="_blank" class="linkedin"><i
-            class="bx bxl-linkedin"></i></a>
-        <a href="https://www.github.com/SamNickGammer" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://www.instagram.com/samnickgammer_" target="_blank" class="instagram"><i
-            class="bx bxl-instagram"></i></a>
-        <a href="https://www.facebook.com/samnickgammer.57489" target="_blank" class="facebook"><i
-            class="bx bxl-facebook"></i></a>
-        <a href="https://wa.me/+919660102328?text=Hii SamNick, Nice Website." target="_blank" class="instagram"><i
-            class="bx bxl-whatsapp"></i></a>
-        <a href="mailto:omprakash121samuni@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+        <a href="https://www.linkedin.com/in/omprakashbharati" target="_blank" class="linkedin" data-toggle="tooltip"
+          title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.github.com/SamNickGammer" target="_blank" class="github" data-toggle="tooltip"
+          title="Github"><i class="bx bxl-github"></i></a>
+        <a href="https://www.instagram.com/samnickgammer_" target="_blank" class="instagram" data-toggle="tooltip"
+          title="Instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.facebook.com/samnickgammer.57489" target="_blank" class="facebook" data-toggle="tooltip"
+          title="Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://wa.me/+919660102328?text=Hii SamNick, Nice Website." target="_blank" class="whatsapp"
+          data-toggle="tooltip" title="Whatsapp"><i class="bx bxl-whatsapp"></i></a>
+        <a href="mailto:omprakash121samuni@gmail.com" target="_blank" class="google" data-toggle="tooltip"
+          title="Mail"><i class="bx bxl-google"></i></a>
       </div>
     </div>
-   <!-- <img id="backImage" src="./assets/img/background/ImageProfile.png" alt=""> -->
+    <!-- <img id="backImage" src="./assets/img/background/ImageProfile.png" alt=""> -->
   </header>
   <!-- End Header -->
 
@@ -660,6 +663,96 @@
         </div>
       </div>
     </div>
+
+    <div class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <label for="name" class="">Your name</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="email" name="email" class="form-control" required>
+                    <label for="email" class="">Your email</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="phone" name="phone" class="form-control">
+                    <label for="phone" class="">Phone</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="subject" name="subject" class="form-control">
+                    <label for="subject" class="">Subject</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"
+                      required></textarea>
+                    <label for="message">Your message</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <button type="submit" class="btn btn-success col-md-12">Submit</button>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+          <!-- <div class="alert">Your message has been sent</div>
+          <form id="contactForm">
+            <p>
+              <label>Name</label>
+              <input type="text" name="name" id="name" required>
+            </p>
+            <p>
+              <label>Company</label>
+              <input type="text" name="company" id="company">
+            </p>
+            <p>
+              <label>Email Address</label>
+              <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+              <label>Phone Number</label>
+              <input type="text" name="phone" id="phone">
+            </p>
+            <p class="full">
+              <label>Message</label>
+              <textarea name="message" rows="5" id="message"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit">Submit</button>
+            </p>
+          </form> -->
+        </div>
+      </div>
+    </div>
   </section>
   <!-- End Contact Section -->
 
@@ -685,8 +778,17 @@
     });
   </script>
 
+  <!-- Tostify For Message -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/toastify.js"></script>
+  <!-- FireBase Configration JS File -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
   <!-- Template Main JS File -->
+  <script src="./assets/js/contact.js"></script>
   <script src="assets/js/main.js"></script>
+
+
+
 
 </body>
 <!--Start of Tawk.to Script-->
