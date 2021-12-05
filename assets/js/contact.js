@@ -28,6 +28,7 @@ function submitForm(e) {
   saveMessage(name, email, phone, subject, message);
 
   console.log(name, email, phone, subject, message);
+  alert("Thank You For Your Feedback, I will contact You");
 
   document.getElementById('contact-form').reset();
 }
