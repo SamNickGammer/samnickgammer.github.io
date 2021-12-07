@@ -52,7 +52,12 @@ function retriveData() {
   //   window.open('./webmail.html');
   firebaseRef.once('value', function (snapshot) {
     //var data = snapshot.val();
-    var data = Object.values(snapshot.val()).reverse();
+    try {
+      var data = Object.values(snapshot.val()).reverse();
+    } catch (error) {
+      document.getElementById('noMsg').style.display = 'block';
+    }
+
     //console.log(data);
     for (let i in data) {
       // console.log(data[i]);
