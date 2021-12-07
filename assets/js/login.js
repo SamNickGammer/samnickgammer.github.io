@@ -25,6 +25,7 @@ function submitLogin(e) {
       // console.log(user);
 
       document.getElementById('loginScreen').style.display = 'none';
+      document.body.style.backgroundColor = 'black';
 
       // firebase.auth().onAuthStateChanged((user) => {
       //   if (user) {
@@ -45,7 +46,7 @@ function submitLogin(e) {
     });
 }
 function retriveData() {
-  document.getElementById('tableMain').style.display = 'block';
+  document.getElementById('dataScreen').style.display = 'block';
   //console.log('hello');
   var firebaseRef = firebase.database().ref('contact-form');
   //   window.open('./webmail.html');
@@ -74,36 +75,85 @@ function retriveData() {
   //       console.error(error);
   //     });
 }
-var i = 0;
+i = 0;
 function getdataTable(data) {
   n = ++i;
-  var tablebody = document.getElementById('tablebody');
-  var trow = document.createElement('tr');
-  trow.id = `idrow${n}`;
-  var td_name = document.createElement('td');
-  var td_email = document.createElement('td');
-  var td_phone = document.createElement('td');
-  var td_subj = document.createElement('td');
-  var td_mess = document.createElement('td');
+  var dataScreen = document.getElementById('dataScreen');
+  var bgmain = document.createElement('div');
+  bgmain.className = 'col-md-12 mb-md-0 mb-5 mt-4 bgmain';
+  bgmain.id = `details${n}`;
+  var flexCont = document.createElement('div');
+  flexCont.className = 'flexCont';
+  var flexCol2 = document.createElement('div');
+  flexCol2.className = 'flexCol2';
+  var circle = document.createElement('div');
+  circle.className = 'circle';
+  var init = document.createElement('div');
+  init.className = 'init';
+  init.align = 'center';
+  init.innerHTML = data.name[0];
 
-  tablebody.append(trow);
+  circle.append(init);
+  flexCol2.append(circle);
+  flexCont.append(flexCol2);
+  bgmain.append(flexCont);
+  dataScreen.appendChild(bgmain);
 
-  trow.appendChild(td_name);
-  trow.appendChild(td_email);
-  trow.appendChild(td_phone);
-  trow.appendChild(td_name);
-  trow.appendChild(td_subj);
-  trow.appendChild(td_mess);
+  var flexCol1 = document.createElement('div');
+  flexCol1.className = 'flexCol1';
+  var subject = document.createElement('div');
+  subject.className = 'subject';
+  subject.innerHTML = data.subject;
+  var flexContD = document.createElement('div');
+  flexContD.className = 'flexCont';
+  var name = document.createElement('div');
+  name.className = 'nameEmail';
+  name.innerHTML = data.name;
+  var email = document.createElement('div');
+  email.className = 'nameEmail';
+  email.style = 'text-transform: none;';
+  email.innerHTML = data.email;
+  var mobile = document.createElement('div');
+  mobile.className = 'nameEmail mobileno';
+  mobile.innerHTML = data.phone;
 
-  td_name.innerHTML = data.name;
-  td_email.innerHTML = data.email;
-  td_phone.innerHTML = data.phone;
-  td_subj.innerHTML = data.subject;
-  td_mess.innerHTML = data.message;
+  flexContD.append(name);
+  flexContD.append(email);
+  flexContD.append(mobile);
+  flexCol1.append(flexContD);
+  flexCol1.append(subject);
+  flexCont.append(flexCol1);
 
-  document.getElementById(`idrow${n}`).append(td_name);
-  document.getElementById(`idrow${n}`).append(td_email);
-  document.getElementById(`idrow${n}`).append(td_phone);
-  document.getElementById(`idrow${n}`).append(td_subj);
-  document.getElementById(`idrow${n}`).append(td_mess);
+  var message = document.createElement('div');
+  message.innerHTML = data.message;
+  flexCol1.append(message);
+  // var tablebody = document.getElementById('tablebody');
+  // var trow = document.createElement('tr');
+  // trow.id = `idrow${n}`;
+  // var td_name = document.createElement('td');
+  // var td_email = document.createElement('td');
+  // var td_phone = document.createElement('td');
+  // var td_subj = document.createElement('td');
+  // var td_mess = document.createElement('td');
+
+  // tablebody.append(trow);
+
+  // trow.appendChild(td_name);
+  // trow.appendChild(td_email);
+  // trow.appendChild(td_phone);
+  // trow.appendChild(td_name);
+  // trow.appendChild(td_subj);
+  // trow.appendChild(td_mess);
+
+  // td_name.innerHTML = data.name;
+  // td_email.innerHTML = data.email;
+  // td_phone.innerHTML = data.phone;
+  // td_subj.innerHTML = data.subject;
+  // td_mess.innerHTML = data.message;
+
+  // document.getElementById(`idrow${n}`).append(td_name);
+  // document.getElementById(`idrow${n}`).append(td_email);
+  // document.getElementById(`idrow${n}`).append(td_phone);
+  // document.getElementById(`idrow${n}`).append(td_subj);
+  // document.getElementById(`idrow${n}`).append(td_mess);
 }
