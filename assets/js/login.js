@@ -77,7 +77,6 @@ function retriveData() {
 }
 i = 0;
 function getdataTable(data) {
-  alert("FunctionComplete");
   n = ++i;
   var dataScreen = document.getElementById('dataScreen');
   var bgmain = document.createElement('div');
