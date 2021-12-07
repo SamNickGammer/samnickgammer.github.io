@@ -128,33 +128,4 @@ function getdataTable(data) {
   var message = document.createElement('div');
   message.innerHTML = data.message;
   flexCol1.append(message);
-  // var tablebody = document.getElementById('tablebody');
-  // var trow = document.createElement('tr');
-  // trow.id = `idrow${n}`;
-  // var td_name = document.createElement('td');
-  // var td_email = document.createElement('td');
-  // var td_phone = document.createElement('td');
-  // var td_subj = document.createElement('td');
-  // var td_mess = document.createElement('td');
-
-  // tablebody.append(trow);
-
-  // trow.appendChild(td_name);
-  // trow.appendChild(td_email);
-  // trow.appendChild(td_phone);
-  // trow.appendChild(td_name);
-  // trow.appendChild(td_subj);
-  // trow.appendChild(td_mess);
-
-  // td_name.innerHTML = data.name;
-  // td_email.innerHTML = data.email;
-  // td_phone.innerHTML = data.phone;
-  // td_subj.innerHTML = data.subject;
-  // td_mess.innerHTML = data.message;
-
-  // document.getElementById(`idrow${n}`).append(td_name);
-  // document.getElementById(`idrow${n}`).append(td_email);
-  // document.getElementById(`idrow${n}`).append(td_phone);
-  // document.getElementById(`idrow${n}`).append(td_subj);
-  // document.getElementById(`idrow${n}`).append(td_mess);
 }
