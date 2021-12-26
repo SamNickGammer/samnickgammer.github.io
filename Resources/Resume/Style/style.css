@@ -1,0 +1,80 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: aliceblue;
+}
+#resume {
+  color: brown;
+  text-align: center;
+  text-decoration: underline;
+}
+#name {
+  font-size: 30px;
+  margin-bottom: auto;
+  margin-top: auto;
+  background-color: rgb(196, 248, 248);
+  border-radius: 5px;
+}
+#degignation {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 110%;
+}
+
+#email {
+  color: rgb(4, 0, 255);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 110%;
+}
+
+#phone {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 110%;
+}
+#address {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 120%;
+}
+#image {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  float: right;
+  margin-right: 25px;
+}
+#acadmic {
+  font-size: 20px;
+  text-decoration: underline;
+}
+#computer {
+  font-size: 20px;
+  text-decoration: underline;
+}
+#pesonalDetails {
+  font-size: 20px;
+  text-decoration: underline;
+}
+#qualificationtable {
+  width: 100%;
+}
+#thdata {
+  text-align: left;
+  background-color: aquamarine;
+  padding: 5px;
+  border-radius: 10px;
+}
+#serialNo {
+  background-color: bisque;
+  padding: 5px;
+  border-radius: 10px;
+}
+#orderlist {
+  line-height: 155%;
+}
+#detailstable {
+  text-align: left;
+  margin: 10px;
+  width: 100%;
+}
