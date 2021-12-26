@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="table" id="tableMain">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Phone</th>
+                <th>Message</th>
+            </thead>
+
+            <tbody id="tablebody">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+
+        var tablebody = document.getElementById('tablebody');
+        var trow = document.createElement('tr');
+        var td_name = document.createElement('td');
+        var td_email = document.createElement('td');
+        var td_phone = document.createElement('td');
+        var td_subj = document.createElement('td');
+        var td_mess = document.createElement('td');
+
+        tablebody.append(trow);
+
+        trow.appendChild(td_name);
+        trow.appendChild(td_email);
+        trow.appendChild(td_phone);
+        trow.appendChild(td_name);
+        trow.appendChild(td_subj);
+        trow.appendChild(td_mess);
+
+    </script>
+</body>
+
+</html>
