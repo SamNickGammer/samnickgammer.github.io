@@ -19,6 +19,25 @@ body::before {
   height: 100vh;
 }
 
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #79d8a5;
+  border-radius: 20px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #50d48e;
+}
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
