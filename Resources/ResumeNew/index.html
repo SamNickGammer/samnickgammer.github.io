@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Sam Nick</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" class="linkCSS" type="text/css" href="../ResumeNew/assets/css/darkIndex.css">
+</head>
+
+<body>
+  <div class="container">
+    <section class="header">
+      <div class="header-title" id="profileName"> Your Name </div>
+      <div class="header-sub-title" id="profileSubTitle"> Software Engineer </div>
+      <div class="header-sub-intro" id="aboutIntro"> Software Engineer </div>
+    </section>
+
+    <section class="info-section">
+      <div class="info-left">
+        <div class="cat-header">
+          <span class="cat-indicator">
+            <i class="fas fa-id-card" aria-hidden="true"></i>
+          </span>
+          <span class="cat-title">Contact</span>
+        </div>
+        <div class="contact-section">
+          <div class="contact-item">
+            <span class="contact-logo"> <i class="fas fa-at" aria-hidden="true"></i>
+
+            </span>
+            <a class="contact-info" id="contactEmail" target="_blank" href="" rel="noopener noreferrer"> abc@xyz.com
+            </a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-logo"> <i class="fas fa-phone" aria-hidden="true"></i> </span>
+            <span class="contact-info" id="contactPhone"> +91-xxxxxxxxx </span>
+          </div>
+        </div>
+
+        <div class="cat-header">
+          <span class="cat-indicator"> <i class="fas fa-id-badge" aria-hidden="true"></i> </span>
+          <span class="cat-title">Links</span>
+        </div>
+        <div class="cat-list-body">
+          <ul id="linksList"></ul>
+        </div>
+      </div>
+
+      <div class="info-right">
+        <div class="cat-header">
+          <span class="cat-indicator">
+            <i class="fas fa-code" aria-hidden="true"></i>
+          </span>
+          <span class="cat-title">Skills</span>
+        </div>
+        <div class="cat-list-body">
+          <ul id="skillList"></ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Work experience section -->
+    <section class="info-row">
+      <div class="cat-header">
+        <span class="cat-indicator">
+          <i class="fas fa-briefcase" aria-hidden="true"></i>
+        </span>
+        <span class="cat-title">Work Experience</span>
+      </div>
+      <div class="cat-list-body">
+        <ul id="experienceList"></ul>
+      </div>
+    </section>
+
+
+    <!-- Projects Listing section -->
+    <section class="info-row">
+      <div class="cat-header">
+        <span class="cat-indicator">
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        </span>
+        <span class="cat-title"> Projects</span>
+      </div>
+      <div class="cat-list-body">
+        <ul id="projectList"></ul>
+      </div>
+    </section>
+
+    <!-- Educaation listing section -->
+    <section class="info-row">
+      <div class="cat-header">
+        <span class="cat-indicator">
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+        </span>
+        <span class="cat-title">Education</span>
+      </div>
+      <div class="cat-list-body">
+        <ul id="educationList"></ul>
+      </div>
+    </section>
+
+    <!-- Certifications listing section -->
+    <section class="info-row">
+      <div class="cat-header">
+        <span class="cat-indicator">
+          <i class="fas fa-certificate" aria-hidden="true"></i>
+        </span>
+        <span class="cat-title">Certifications</span>
+      </div>
+      <div class="cat-list-body">
+        <ul id="certList"></ul>
+      </div>
+    </section>
+
+    <!-- Other contents section -->
+    <section class="footer"></section>
+
+  </div>
+
+  <script src="data/profile.js"></script>
+  <!-- <script src="data/profile-dummy.js"></script> -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
