@@ -11,6 +11,9 @@ html {
   background-color: var(--dark-color-main);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 * {
   box-sizing: border-box;
 }

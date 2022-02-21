@@ -24,7 +24,7 @@ const profileData = {
     {
       alma: 'Amity University, Kolkata',
       board: 'Amity School of Engineering and Technology ',
-      duration: '2019 - Currently',
+      duration: '2019 - Current',
       std: 'B.Tech. (Computer Science & Engineering)',
       score: '8.03 CGPA',
     },
@@ -70,7 +70,7 @@ const profileData = {
       desc: `This is JavaScript Based Web Application to share my self to others in simple way `,
     },
     {
-      title: '15 Day 15 Project Challenge',
+      title: '15 Days 15 Projects Challenge',
       duration: '16<sup>th</sup> Jan 2022 - 1<sup>st</sup> Feb 2022',
       link: 'https://github.com/SamNickGammer/15Day15ProjectChallange_JS',
       website: 'https://samnickgammer.github.io/15Day15ProjectChallange_JS/',
@@ -98,11 +98,11 @@ const profileData = {
       title: `Computer Lab Incharge`,
       date: 'April 2017 - March 2019',
       details: [
-        `Workign on <strong>Advance Diploma in Computer Application(ADCA)</strong> which include: 
+        `Working on <strong>Advance Diploma in Computer Application (ADCA)</strong> which include: 
         <ul>
           <li><strong>Microsoft Office</strong> (Word, Excel, Access, Powerpoint)</li>
           <li><strong>Accounting</strong> (Tally ERP9 , Tally 7.0)</li>
-          <li><strong>Designing/Illustration</strong> (Photoshop, Ilustrator, CoralDraw)</li>
+          <li><strong>Designing/Illustrations</strong> (Photoshop, Ilustrator, CoralDraw)</li>
         </ul> `,
       ],
     },
