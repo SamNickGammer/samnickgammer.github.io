@@ -10,8 +10,11 @@ const setTitle = (data) => {
     .querySelector('#contactEmail')
     .setAttribute('href', `mailto:${data.about.contact.email}`);
   document.querySelector('#contactPhone').innerHTML = data.about.contact.phone;
-  /* document.querySelector('#contactAddress').innerHTML =
-    data.about.contact.address; */
+  document
+    .querySelector('#contactPhone')
+    .setAttribute('href', `tel:${data.about.contact.phone}`);
+  // document.querySelector('#contactAddress').innerHTML =
+  //   data.about.contact.address;
 };
 
 const setLinks = (links) => {
@@ -132,19 +135,6 @@ const setProjects = (projects) => {
 
       li.appendChild(projectLink);
     }
-    // if (!!project.website) {
-    //   const projectWebsite = document.createElement('div');
-    //   projectLink.className = 'project-link';
-
-    //   const a = document.createElement('a');
-    //   a.href = project.link;
-    //   a.target = '_blank';
-    //   a.rel = 'noopener noreferrer';
-    //   a.innerHTML = `${project.website}`;
-
-    //   projectWebsite.appendChild(a);
-    //   li.appendChild(projectWebsite);
-    // }
 
     const projectDesc = document.createElement('div');
     projectDesc.className = 'project-desc';
