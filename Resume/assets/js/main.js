@@ -351,10 +351,10 @@ const linkCSS = document.querySelector('.linkCSS');
 
 profileName.addEventListener('click', () => {
   if (darkTheme) {
-    linkCSS.setAttribute('href', '../ResumeNew/assets/css/index.css');
+    linkCSS.setAttribute('href', './assets/css/index.css');
     darkTheme = false;
   } else {
-    linkCSS.setAttribute('href', '../ResumeNew/assets/css/darkIndex.css');
+    linkCSS.setAttribute('href', './assets/css/darkIndex.css');
     darkTheme = true;
   }
 });
