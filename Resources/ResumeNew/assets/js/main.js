@@ -358,3 +358,6 @@ profileName.addEventListener('click', () => {
     darkTheme = true;
   }
 });
+
+const downloadBtn = document.querySelector('.btn-download');
+downloadBtn.addEventListener('click', () => {});

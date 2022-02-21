@@ -350,6 +350,27 @@ sup {
   margin-right: 10px;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .btn-download {
+  margin-top: 10px;
+  background-color: rgb(7, 7, 7);
+  border: none;
+  height: 2.5rem;
+  width: 15rem;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+.footer .btn-download:hover {
+  background-color: rgb(24, 24, 24);
+}
+
 /* Media wuery for mobile view */
 @media screen and (max-width: 500px) {
   .container {
