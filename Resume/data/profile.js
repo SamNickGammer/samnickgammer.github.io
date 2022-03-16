@@ -1,10 +1,10 @@
 const profileData = {
   title: 'Resume',
   name: 'Om Prakash Bharati',
-  sub_title: 'Sam Nick || Full Stack Developer',
+  sub_title: 'Full Stack Developer',
   logoURL: 'assets/images/dp.jpg',
   about: {
-    intro: `I am an innovative and passionate developer with a primary interest in <strong>JavaScript</strong>
+    intro: `I am an innovative and passionate developer with a primary interest in <strong>JavaScript & React</strong>
      and it's applications. Experienced in designing and implementing sophisticated UI/UX with
       Progressive Web Application standards and application life-cycle managements.`,
     contact: {
@@ -62,6 +62,11 @@ const profileData = {
     },
   ],
   projects: [
+    {
+      title: 'V&P Computers',
+      duration: 'Currently Working',
+      desc: `This will be Fully Functional E-Commerce Website For buying Laptops and it's Accessories. You Can Freely Pay and Recive Your Products.`,
+    },
     {
       title: 'Personal Portfolio',
       duration: 'Oct 2021',
