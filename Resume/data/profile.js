@@ -82,6 +82,20 @@ const profileData = {
       desc: `This is small but Intresting project Challenge to be completed in 15 days, each day I have to choose one poject from anywhere and code it and complete it in approx 4-5 hrs. `,
     },
     {
+      title: 'Netflix Clone - React',
+      duration: '17<sup>th</sup> Sep 2021',
+      link: 'https://github.com/SamNickGammer/NetflixCloneReactJS',
+      website: 'https://samnickgammer-netflixclone.netlify.app/',
+      desc: `ReactJS project Netflix Clone includes Netflix API, YoutubeAPI, Redux, Axios. This the the UI design of Netflix. This is Part of my Clone Series.`,
+    },
+    {
+      title: 'Google Search Clone - React',
+      duration: '19<sup>th</sup> Dec 2021',
+      link: 'https://github.com/SamNickGammer/GoogleAPIWebpageReact',
+      website: 'https://samnickgammer-googleclone.netlify.app/',
+      desc: `ReactJS project Google Search Clone includes Google API, Redux, Axios. This is fully working search engine. This is Part of my Clone Series`,
+    },
+    {
       title: 'Doogo Notes App',
       duration: '22<sup>nd</sup> Dec 2021',
       link: 'https://github.com/SamNickGammer/Doggo_App',
