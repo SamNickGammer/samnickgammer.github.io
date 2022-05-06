@@ -5,8 +5,8 @@ const profileData = {
   logoURL: 'assets/images/dp.jpg',
   about: {
     intro: `I am an innovative and passionate developer with a primary interest in <strong>JavaScript & React</strong>
-     and it's applications. Experienced in designing and implementing sophisticated UI/UX with
-      Progressive Web Application standards and application life-cycle managements.`,
+     and its applications. Experienced in designing and implementing sophisticated UI/UX with
+      Progressive Web Application standards and application life-cycle management.`,
     contact: {
       email: 'omprakash121samuni@gmail.com',
       phone: '+919660102328',
@@ -26,7 +26,7 @@ const profileData = {
       board: 'Amity School of Engineering and Technology ',
       duration: '2019 - Current',
       std: 'B.Tech. (Computer Science & Engineering)',
-      score: '8.03 CGPA',
+      score: '7.50 CGPA',
     },
     {
       alma: 'P.M.Y (S.S) School, Seoganj',
@@ -54,19 +54,19 @@ const profileData = {
     },
     {
       category: 'Databases',
-      topics: ['MySQL', 'MongoDB', 'FireStore'],
+      topics: ['MySQL', 'FireStore'],
     },
     {
       category: 'Extras',
-      topics: ['HTML', 'CSS', 'SCSS', 'FireBase'],
+      topics: ['HTML', 'CSS', 'FireBase'],
     },
   ],
   projects: [
-    {
-      title: 'V&P Computers',
-      duration: 'Currently Working',
-      desc: `This will be Fully Functional E-Commerce Website For buying Laptops and it's Accessories. You Can Freely Pay and Recive Your Products.`,
-    },
+    // {
+    //   title: 'V&P Computers',
+    //   duration: 'Currently Working',
+    //   desc: `This will be Fully Functional E-Commerce Website For buying Laptops and it's Accessories. You Can Freely Pay and Recive Your Products.`,
+    // },
     {
       title: 'Personal Portfolio',
       duration: 'Oct 2021',
@@ -129,8 +129,13 @@ const profileData = {
   certifications: [
     {
       desc: `<strong>Full Stack Web Devlopment</strong> by <strong>Swifsys Technologies</strong>.
-      (<a target='_blank' rel='noreferrer' href='#'>Click Here</a>)`,
+      (<a target='_blank' rel='noreferrer' href='https://drive.google.com/file/d/1Xb56uzln5lzlhuLRhjKiHiq3ATmfTkKv/view?usp=sharing'>Click Here</a>)`,
       date: 'July 2019 - Dec 2019',
+    },
+    {
+      desc: `<strong>Responsive Web Design</strong> by <strong>FreeCodeCamp</strong>.
+      (<a target='_blank' rel='noreferrer' href='https://www.freecodecamp.org/certification/samnickgammer/responsive-web-design'>Click Here</a>)`,
+      date: '25<sup>th</sup> April 2022',
     },
     {
       desc: `<strong>Problem Solving</strong> by <strong>HackerRank</strong>.
