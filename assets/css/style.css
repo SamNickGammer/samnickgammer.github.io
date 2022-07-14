@@ -25,11 +25,12 @@ body::before {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: #010e1b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #79d8a5;
+  /* background-color: #79d8a5; */
+  background-color: #0dd640;
   border-radius: 20px;
   background-clip: content-box;
 }
