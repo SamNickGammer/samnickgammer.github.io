@@ -2,7 +2,11 @@ const profileData = {
   title: 'Resume',
   name: 'Om Prakash Bharati',
   sub_title: 'Full Stack Developer',
-  logoURL: 'assets/images/dp.jpg',
+  image: {
+    imageEnable: true,
+    src: './assets/Images/ImageProfile.png',
+    alt: 'Om Prakash Bharati',
+  },
   about: {
     intro: `I am an innovative and passionate developer with a primary interest in <strong>JavaScript & React</strong>
      and its applications. Experienced in designing and implementing sophisticated UI/UX with
@@ -26,7 +30,7 @@ const profileData = {
       board: 'Amity School of Engineering and Technology ',
       duration: '2019 - Current',
       std: 'B.Tech. (Computer Science & Engineering)',
-      score: '7.50 CGPA',
+      score: '7.57 CGPA',
     },
     {
       alma: 'P.M.Y (S.S) School, Seoganj',
@@ -46,19 +50,23 @@ const profileData = {
   skills: [
     {
       category: 'Programming Languages',
-      topics: ['JavaScript', 'Python', 'Java', 'C++'],
+      topics: ['JavaScript', 'Typescript', 'Python', 'C++', 'Java'],
     },
     {
       category: 'Frameworks / Libraries',
-      topics: ['ReactJS', 'Redux', 'NodeJS', 'Bootstrap', 'NumPy', 'OpenCV'],
+      topics: ['ReactJS', 'NodeJS', 'Redux', 'Bootstrap', 'NumPy', 'OpenCV'],
     },
     {
       category: 'Databases',
-      topics: ['MySQL', 'FireStore'],
+      topics: ['FireStore', 'MySQL'],
     },
     {
       category: 'Extras',
       topics: ['HTML', 'CSS', 'FireBase'],
+    },
+    {
+      category: 'Git',
+      topics: ['GitHub', 'Azure DevOps'],
     },
   ],
   projects: [
@@ -73,6 +81,18 @@ const profileData = {
       link: 'https://github.com/SamNickGammer/samnickgammer.github.io',
       website: 'https://samnickgammer.github.io',
       desc: `This is JavaScript Based Web Application to share my self to others in simple way `,
+    },
+    {
+      title: 'Email Service',
+      duration: '15<sup>th</sup> May 2022 - Current',
+      // link: 'https://github.com/SamNickGammer/samnickgammer.github.io',
+      // website: 'https://samnickgammer.github.io',
+      desc: `This is a ReactJS(Typescript) and NodeJS based Web Application to send emails to users. `,
+      internship: {
+        title: 'Internship',
+        company: 'Aniworks',
+        link: 'https://aniworks.in/',
+      },
     },
     {
       title: '15 Days 15 Projects Challenge',
@@ -122,6 +142,25 @@ const profileData = {
           <li><strong>Microsoft Office</strong> (Word, Excel, Access, Powerpoint)</li>
           <li><strong>Accounting</strong> (Tally ERP9 , Tally 7.0)</li>
           <li><strong>Designing/Illustrations</strong> (Photoshop, Ilustrator, CoralDraw)</li>
+        </ul> `,
+      ],
+    },
+    {
+      organization: 'Aniworks Innovation Company',
+      title: `Frontend Developer`,
+      date: 'May 2022 - Current',
+      details: [
+        `Working on <strong>Email Extension Client or Email Service</strong> which include: 
+        <ul>
+          <li><strong>PGP Encryption</strong> That's allow to send encrypted mails.</li>
+          <li><strong>Drive Service</strong> That's Store mail's data like attachments and Images in cloud storage.</li>
+          <li><strong>Contacts</strong> Auto/Manual Add contacts when ever you send mail to someone, so that you can use it in future.</li>
+        </ul> `,
+        `Completed <strong>Mini Photo Album</strong> which include: 
+        <ul>
+          <li><strong>Creating Albums</strong> That's allow to create album in three different cloud area.</li>
+          <li><strong>Uploading Images</strong> It store all the image in respective album in its own given cloud storage.</li>
+          <li><strong>Edit Image</strong> If you want to instant edit image you can do it and save it back to Cloud.</li>
         </ul> `,
       ],
     },

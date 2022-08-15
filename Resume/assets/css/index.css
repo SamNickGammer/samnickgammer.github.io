@@ -37,6 +37,19 @@ sup {
   font-weight: 400;
   animation: 0.4s ease;
 }
+.image-container {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: none;
+}
+.image-container img {
+  width: 20rem;
+  position: absolute;
+  right: -75px;
+}
 
 .container {
   padding: 10px 15px;

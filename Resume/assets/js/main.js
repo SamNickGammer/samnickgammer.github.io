@@ -15,6 +15,19 @@ const setTitle = (data) => {
     .setAttribute('href', `tel:${data.about.contact.phone}`);
   // document.querySelector('#contactAddress').innerHTML =
   //   data.about.contact.address;
+
+  if (data.image.imageEnable) {
+    const profileHeader = document.querySelector('.header');
+    profileHeader.style.display = 'flex';
+    profileHeader.style.alignItems = 'center';
+    profileHeader.style.justifyContent = 'space-between';
+    profileHeader.style.textAlign = 'left';
+    const aboutMe = document.querySelector('.about-me');
+    aboutMe.style.width = '75%';
+    const imgContainer = document.querySelector('.image-container');
+    imgContainer.style.display = 'block';
+    document.querySelector('#profileImage').src = data.image.src;
+  }
 };
 
 const setLinks = (links) => {
@@ -108,7 +121,7 @@ const setProjects = (projects) => {
 
     li.appendChild(projectHeader);
 
-    if (!!project.link || !!project.website) {
+    if (!!project.link || !!project.website || !!project.internship) {
       const projectLink = document.createElement('div');
       projectLink.className = 'project-link';
 
@@ -129,6 +142,17 @@ const setProjects = (projects) => {
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
         a.innerHTML = `Website Link`;
+        projectIns.appendChild(a);
+        projectLink.appendChild(projectIns);
+      }
+      if (!!project.internship) {
+        const projectIns = document.createElement('span');
+        const a = document.createElement('a');
+        projectIns.style.backgroundColor = '#c93232';
+        a.href = project.internship.link;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.innerHTML = `Internship : ${project.internship.company}`;
         projectIns.appendChild(a);
         projectLink.appendChild(projectIns);
       }
