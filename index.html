@@ -854,33 +854,49 @@
           <div class="col-md-12 mb-md-0 mb-5">
             <form id="contact-form" name="contact-form" autocomplete="off">
               <div class="row">
+
                 <div class="col-md-6">
                   <div class="md-form mb-0">
-                    <input type="text" id="name" name="name" class="form-control" required>
-                    <label for="name" class="">Your name</label>
+                    <div class="input-group">
+                      <input class="input-group__input inputColor" type="text" placeholder="&nbsp;" name="name"
+                        id="name" autocomplete="off" required />
+                      <label class="input-group__label" for="name">Your Name</label>
+                    </div>
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="md-form mb-0">
-                    <input type="text" id="email" name="email" class="form-control" required>
-                    <label for="email" class="">Your email</label>
+                    <div class="input-group">
+                      <input class="input-group__input inputColor" type="text" placeholder="&nbsp;" name="email"
+                        id="email" autocomplete="off" required />
+                      <label class="input-group__label" for="email">Email Id</label>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-md-6">
-                  <div class="md-form mb-0">
-                    <input type="text" id="phone" name="phone" class="form-control">
-                    <label for="phone" class="">Phone</label>
-                  </div>
-                </div>
+
 
                 <div class="col-md-6">
                   <div class="md-form mb-0">
-                    <input type="text" id="subject" name="subject" class="form-control">
-                    <label for="subject" class="">Subject</label>
+                    <div class="input-group">
+                      <input class="input-group__input inputColor" type="text" placeholder="&nbsp;" name="phone"
+                        id="phone" autocomplete="off" required />
+                      <label class="input-group__label" for="phone">Contact Number</label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <div class="input-group">
+                      <input class="input-group__input inputColor" type="text" placeholder="&nbsp;" name="subject"
+                        id="subject" autocomplete="off" required />
+                      <label class="input-group__label" for="subject">Subject</label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -888,9 +904,12 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="md-form">
-                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"
-                      required></textarea>
-                    <label for="message">Your message</label>
+                    <div class="input-group">
+                      <textarea class="input-group__input md-textarea inputColor" type="text" rows="2"
+                        placeholder="&nbsp;" name="message" id="message" autocomplete="off" required></textarea>
+                      <label class="input-group__label" for="message">Message</label>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -917,32 +936,6 @@
           </div>
           </form>
         </div>
-        <!-- <div class="alert">Your message has been sent</div>
-          <form id="contactForm">
-            <p>
-              <label>Name</label>
-              <input type="text" name="name" id="name" required>
-            </p>
-            <p>
-              <label>Company</label>
-              <input type="text" name="company" id="company">
-            </p>
-            <p>
-              <label>Email Address</label>
-              <input type="email" name="email" id="email" required>
-            </p>
-            <p>
-              <label>Phone Number</label>
-              <input type="text" name="phone" id="phone">
-            </p>
-            <p class="full">
-              <label>Message</label>
-              <textarea name="message" rows="5" id="message"></textarea>
-            </p>
-            <p class="full">
-              <button type="submit">Submit</button>
-            </p>
-          </form> -->
       </div>
     </div>
     </div>
@@ -951,6 +944,7 @@
 
 
   <!-- Vendor JS Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -971,6 +965,8 @@
     });
   </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <!-- FireBase Configration JS File -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>

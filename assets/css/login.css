@@ -154,6 +154,7 @@ body {
 .noMsg {
   display: none;
 }
+
 @media (max-width: 768px) {
   .circle {
     display: none;

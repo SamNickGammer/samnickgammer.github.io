@@ -9,7 +9,55 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-document.getElementById('login-admin').addEventListener('submit', submitLogin);
+//! ----------------------------------- Id/Class Initializer --------------------------------------------
+
+const logoutBtn = document.getElementById('logoutBtn');
+const loginScreen = document.getElementById('loginScreen');
+const dataScreen = document.getElementById('dataScreen');
+const mailPage = document.getElementById('mailPage');
+const homePage = document.getElementById('homePage');
+const chatPage = document.getElementById('chatPage');
+const mailsBodyData = document.getElementById('mailsBodyData');
+
+const reloadBtn = document.querySelector('.reloadBtn');
+
+const overlay = document.getElementById('overlay');
+
+//! -------------------------------------------- Reload Handler --------------------------------------------
+
+reloadBtn.addEventListener('click', () => {
+  getDataFirebase();
+});
+
+//! -------------------------------------------- LogOut Handler --------------------------------------------
+logoutBtn.addEventListener('click', () => {
+  firebase.auth().signOut();
+  dataScreen.style.display = 'none';
+  loginScreen.style.display = 'block';
+});
+
+//! -------------------------------------------- Login State Chekcer --------------------------------------------
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log('User is signed in');
+    loginScreen.style.display = 'none';
+    dataScreen.style.display = 'flex';
+    getDataFirebase();
+    console.log('Auth Sucess');
+  } else {
+    console.log('No user is signed in');
+    loginYourSelf();
+  }
+});
+
+function loginYourSelf() {
+  loginScreen.style.display = 'block';
+  document
+    .getElementById('login-admin')
+    .addEventListener('submit', submitLogin);
+}
+
+//! -------------------------------------------- Login Firebase Chekcer --------------------------------------------
 
 function submitLogin(e) {
   e.preventDefault();
@@ -20,22 +68,9 @@ function submitLogin(e) {
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      // Signed in
       var user = userCredential.user;
-      // console.log(user);
-
-      document.getElementById('loginScreen').style.display = 'none';
+      loginScreen.style.display = 'none';
       document.body.style.backgroundColor = 'black';
-
-      // firebase.auth().onAuthStateChanged((user) => {
-      //   if (user) {
-      //     document.getElementById('loginScreen').style.display = 'none';
-      //   } else {
-      //     document.getElementById('loginScreen').style.display = 'block';
-      //   }
-      // });
-
-      retriveData();
     })
     .catch((err) => {
       if (err.code === 'auth/wrong-password') {
@@ -45,91 +80,162 @@ function submitLogin(e) {
       }
     });
 }
-function retriveData() {
-  document.getElementById('dataScreen').style.display = 'block';
-  //console.log('hello');
-  var firebaseRef = firebase.database().ref('contact-form');
-  //   window.open('./webmail.html');
-  firebaseRef.once('value', function (snapshot) {
-    //var data = snapshot.val();
-    try {
-      var data = Object.values(snapshot.val()).reverse();
-    } catch (error) {
-      document.getElementById('noMsg').style.display = 'block';
-    }
 
-    //console.log(data);
-    for (let i in data) {
-      // console.log(data[i]);
-      getdataTable(data[i]);
+//! -------------------------------------------- Data Insertion Chekcer --------------------------------------------
+
+// function retriveData() {
+//   document.getElementById('dataScreen').style.display = 'block';
+//   //console.log('hello');
+//   var firebaseRef = firebase.database().ref('contact');
+//   //   window.open('./webmail.html');
+//   firebaseRef.once('value', function (snapshot) {
+//     //var data = snapshot.val();
+//     try {
+//       var data = Object.values(snapshot.val()).reverse();
+//     } catch (error) {
+//       document.getElementById('noMsg').style.display = 'block';
+//     }
+
+//     //console.log(data);
+//     for (let i in data) {
+//       // console.log(data[i]);
+//       getdataTable(data[i]);
+//     }
+//   });
+// }
+
+//! -------------------------------------------- Data Retrival Chekcer --------------------------------------------
+var contactsMail = [];
+var contactMailDataId = '';
+
+function getDataFirebase() {
+  reloadBtn.children[0].classList.add('fa-spin');
+  mailsBodyData.innerHTML = '';
+
+  firebase
+    .database()
+    .ref('contact/')
+    .once('value', function (snapshot) {
+      try {
+        contactsMail = Object.values(snapshot.val());
+      } catch (error) {
+        alert("You Don't Have any Data...");
+      }
+      reloadBtn.children[0].classList.remove('fa-spin');
+      if (contactsMail != '') {
+        contactsMail.forEach((mail, index) => {
+          addMailsToDOM(index, mail);
+          //itemClick(index, project);
+        });
+      }
+    });
+}
+
+function addMailsToDOM(index, mail) {
+  console.log(mail);
+  mailsBodyData.innerHTML += `
+                      <div class="mailItem">
+                            <div style="display: flex;align-items: center;">
+                                <div class="mailItemImg">
+                                    ${mail.name[0]}
+                                </div>
+                                <div id="view_${mail.id}" onclick="viewMessage(this.id)">
+                                    <div
+                                        style="margin-bottom: 5px;display: flex;gap: 20px; font-size: 15px;font-weight: bold;">
+                                        <div class="subjectMail">${mail.subject}</div>
+                                        <div class="nameMail">${mail.name}</div>
+                                        <div class="timeMail">${mail.modifiedDate}</div>
+                                    </div>
+                                    <div class="textMail">${mail.message}</div>
+                                </div>
+                            </div>
+                            <div class="action">
+                                <div class="actionBtn delete" id="delete_${mail.id}" onclick="clickDelete(this.id)">
+                                    <i class="fas fa-trash"></i>
+                                    <div class="actionSelector">
+                                        <div class="actionSelectorInner"></div>
+                                    </div>
+                                </div>
+                                <div class="actionBtn reply">
+                                    <i class="fas fa-reply"></i>
+                                    <div class="actionSelector">
+                                        <div class="actionSelectorInner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+  `;
+}
+
+async function clickDelete(data) {
+  const id = data.split('_')[1];
+  var realTimeDataBase = firebase.database().ref(`contact/${id}`);
+  if (confirm("Really Want to delete! You can't Revocer it.")) {
+    await realTimeDataBase.remove();
+    // window.location.reload();
+    closeModelSet();
+    getDataFirebase();
+  }
+}
+
+function viewMessage(data) {
+  const id = data.split('_')[1];
+  openModal(document.getElementById('viewModal'));
+  contactsMail.forEach((mail) => {
+    if (mail.id == id) {
+      contactMailDataId = mail.id;
+      document.getElementById('viewModal').innerHTML = `
+      <div class="boxModalInner">
+      <div class="boxModalHeader" style="margin-bottom: 20px;">
+          <div class="boxModalHeaderClose" id="delete_${mail.id}" onclick="clickDelete(this.id)">
+            <i class="fas fa-trash"></i>
+            <span style="margin-left: 10px;">Delete</span>
+          </div>
+          <div class="boxModalHeaderClose" onclick="closeModelSet()" style="margin-left:10px">
+              <i class="fas fa-times"></i>
+              <span style="margin-left: 10px;">Close</span>
+          </div>
+      </div>
+      <div style="display: flex;align-items: center;">
+          <div class="mailItemImg modalView">${mail.name[0]}</div>
+          <div style="margin-left: 10px;width: 90%;">
+              <div class="subjectModalView">${mail.subject}</div>
+              <div style="font-size: 13px; display: flex;gap: 20px; margin-top: 10px;">
+                  <div>${mail.email}</div>
+                  <div>${mail.name}</div>
+                  <div>${mail.phone}</div>
+                  <div>${mail.modifiedDate}</div>
+              </div>
+          </div>
+      </div>
+      <div class="simpleScroll" style="display: flex;margin-top: 20px; height: 250px;overflow: auto;">${mail.message}</div>
+  </div>
+      `;
     }
   });
-
-  //   firebaseRef
-  //     .child('users')
-  //     .child(userId)
-  //     .get()
-  //     .then((snapshot) => {
-  //       if (snapshot.exists()) {
-  //         console.log(snapshot.val());
-  //       } else {
-  //         console.log('No data available');
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //     });
 }
-i = 0;
-function getdataTable(data) {
-  n = ++i;
-  var dataScreen = document.getElementById('dataScreen');
-  var bgmain = document.createElement('div');
-  bgmain.className = 'col-md-12 mb-md-0 mb-5 mt-4 bgmain';
-  bgmain.id = `details${n}`;
-  var flexCont = document.createElement('div');
-  flexCont.className = 'flexCont';
-  var flexCol2 = document.createElement('div');
-  flexCol2.className = 'flexCol2';
-  var circle = document.createElement('div');
-  circle.className = 'circle';
-  var init = document.createElement('div');
-  init.className = 'init';
-  init.align = 'center';
-  init.innerHTML = data.name[0];
 
-  circle.append(init);
-  flexCol2.append(circle);
-  flexCont.append(flexCol2);
-  bgmain.append(flexCont);
-  dataScreen.appendChild(bgmain);
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.boxModal.active');
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
 
-  var flexCol1 = document.createElement('div');
-  flexCol1.className = 'flexCol1';
-  var subject = document.createElement('div');
-  subject.className = 'subject';
-  subject.innerHTML = data.subject;
-  var flexContD = document.createElement('div');
-  flexContD.className = 'flexCont';
-  var name = document.createElement('div');
-  name.className = 'nameEmail';
-  name.innerHTML = data.name;
-  var email = document.createElement('div');
-  email.className = 'nameEmail';
-  email.style = 'text-transform: none;';
-  email.innerHTML = data.email;
-  var mobile = document.createElement('div');
-  mobile.className = 'nameEmail mobileno';
-  mobile.innerHTML = data.phone;
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
 
-  flexContD.append(name);
-  flexContD.append(email);
-  flexContD.append(mobile);
-  flexCol1.append(flexContD);
-  flexCol1.append(subject);
-  flexCont.append(flexCol1);
-
-  var message = document.createElement('div');
-  message.innerHTML = data.message;
-  flexCol1.append(message);
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+}
+function closeModelSet() {
+  const modals = document.querySelectorAll('.boxModal.active');
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
 }
