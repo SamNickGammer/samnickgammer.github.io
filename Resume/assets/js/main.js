@@ -276,7 +276,7 @@ const setExperience = (experiences) => {
 };
 
 const setEvents = (events) => {
-  const footer = document.querySelector('.footer');
+  const footer = document.querySelector('.eveList');
   events.forEach((event) => {
     const eventTitle = setCatagoryHeader(event.title);
     footer.appendChild(eventTitle);

@@ -1280,6 +1280,21 @@ select:-webkit-autofill:focus {
   border: none;
 }
 
+.educationContainer{
+  display: flex !important;
+  padding: 0px !important;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.educationContainer .educationBox{
+  padding: 10px !important;
+  padding-bottom: 5px;
+  display: inline-block;
+  height: 400px;
+  /* width: 360px; */
+  margin: 0;
+}
+
 /*---------------------------------------------------------------*/
 
 @-webkit-keyframes animate-loading {
@@ -1309,4 +1324,11 @@ select:-webkit-autofill:focus {
   .contact .info-box .social-links .noneDis1000 {
     display: none;
   }
+}
+@media (min-width: 768px){
+.col-md-4_Inver_768 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 32.5%;
+    max-width: 32.5%;
+}
 }

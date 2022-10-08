@@ -355,6 +355,7 @@ sup {
   color: #fff;
   border-radius: 20px;
   font-size: 14px;
+  margin-right: 10px;
 }
 .project-link span a {
   color: #fff !important;
@@ -363,9 +364,9 @@ sup {
   background-color: #1666bb;
 }
 
-.project-link span:first-child {
+/* .project-link span:first-child {
   margin-right: 10px;
-}
+} */
 .footer {
   display: flex;
   justify-content: center;

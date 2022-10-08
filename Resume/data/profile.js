@@ -70,11 +70,6 @@ const profileData = {
     },
   ],
   projects: [
-    // {
-    //   title: 'V&P Computers',
-    //   duration: 'Currently Working',
-    //   desc: `This will be Fully Functional E-Commerce Website For buying Laptops and it's Accessories. You Can Freely Pay and Recive Your Products.`,
-    // },
     {
       title: 'Personal Portfolio',
       duration: 'Oct 2021',
@@ -83,15 +78,56 @@ const profileData = {
       desc: `This is JavaScript Based Web Application to share my self to others in simple way `,
     },
     {
-      title: 'Email Service',
+      title: 'e-Patra : Email Services',
       duration: '15<sup>th</sup> May 2022 - Current',
       // link: 'https://github.com/SamNickGammer/samnickgammer.github.io',
-      // website: 'https://samnickgammer.github.io',
-      desc: `This is a ReactJS(Typescript) and NodeJS based Web Application to send emails to users. `,
+      website: 'https://e-patra.com/',
+      desc: `This is a ReactJS(Typescript) and NodeJS based Web Application to send emails to users.</br>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
+        <div>
+          <strong>Application Include:</strong> <br>
+          <ul>
+            <li>Authentication</li>
+            <li>Create and Send Mail</li>
+            <li>Use Drive For Storage</li>
+            <li>Use Album for Uploading images</li>
+            <li>Use Drive For Storage</li>
+            <li> Use Social Application Name GUPSHUP for socializing.</li>
+            <li>Use Notes to take notes on the Go.</li>
+            <li> You can use the Contacts application for saving your important contacts.</li>
+          </ul>
+        </div>
+      <div>
+        <strong>Application Feature:</strong> <br>
+        <ul>
+          <li>Secure mail</li>
+          <li>Upload up to 1TB (1024GB) in single go</li>
+          <li>Modern PGP Encryption for extra sensitive data/emails.</li>
+          <li>Album for uploading images</li>
+          <li>Notes for taking notes on the go</li>
+          <li>Contacts for saving your important contacts</li>
+          <li>Drive for storing your data</li>
+          <li>Chat Application for socializing</li>
+        </ul>
+        </div>
+      </div>
+      `,
       internship: {
         title: 'Internship',
         company: 'Aniworks',
         link: 'https://aniworks.in/',
+      },
+    },
+    {
+      title: 'StackDevFlow - A StackOverflow Clone',
+      duration: '29<sup>th</sup> August 2022',
+      link: 'https://github.com/SamNickGammer/devStackClient',
+      website: 'https://samnickgammer.github.io/devStackClient/',
+      desc: `This is a MERN based Web Application to share knowledge and help others. Just like StackOverflow you can ask questions and answer them. For database I am using MongoDB and for authentication I am using Firebase. Hosting of the website is done on GitHub Pages, and the backend is hosted on Heroku.</br> <strong><a href="https://devstackflow.herokuapp.com/" target="_blank">Backend Link</a></strong> | <strong><a href="https://github.com/SamNickGammer/devStackServer" target="_blank">Backend Code</a></strong>`,
+      internship: {
+        title: 'Internship',
+        company: 'Prograd',
+        link: 'http://prograd.org/',
       },
     },
     {
@@ -119,7 +155,7 @@ const profileData = {
       title: 'Doogo Notes App',
       duration: '22<sup>nd</sup> Dec 2021',
       link: 'https://github.com/SamNickGammer/Doggo_App',
-      // website: 'https://samnickgammer.github.io/15Day15ProjectChallange_JS/',
+      website: 'https://appetize.io/embed/aldlt6sjzkmmy6oglzmtouxjme?device=pixel4&osVersion=11.0&scale=75',
       desc: `This is the fully customized Notes taking APP for Student, Teacher, Workers and Everyone... 
       In this notes App, users can access their pieces of information or the data using Firebase as well as Local Storage.`,
     },
@@ -132,19 +168,6 @@ const profileData = {
     },
   ],
   experiences: [
-    {
-      organization: 'Institute Of ABC',
-      title: `Computer Lab Incharge`,
-      date: 'April 2017 - March 2019',
-      details: [
-        `Working on <strong>Advance Diploma in Computer Application (ADCA)</strong> which include: 
-        <ul>
-          <li><strong>Microsoft Office</strong> (Word, Excel, Access, Powerpoint)</li>
-          <li><strong>Accounting</strong> (Tally ERP9 , Tally 7.0)</li>
-          <li><strong>Designing/Illustrations</strong> (Photoshop, Ilustrator, CoralDraw)</li>
-        </ul> `,
-      ],
-    },
     {
       organization: 'Aniworks Innovation Company',
       title: `Frontend Developer`,
@@ -161,6 +184,33 @@ const profileData = {
           <li><strong>Creating Albums</strong> That's allow to create album in three different cloud area.</li>
           <li><strong>Uploading Images</strong> It store all the image in respective album in its own given cloud storage.</li>
           <li><strong>Edit Image</strong> If you want to instant edit image you can do it and save it back to Cloud.</li>
+        </ul> `,
+      ],
+    },
+    {
+      organization: 'Prograd',
+      title: `Trainee Internship - Full Stack Developer`,
+      date: 'June 2022 - August 2022',
+      details: [
+        `Bootcamp + Internship for Full stack web development using ReactJS, NodeJS, MongoDB, Express, JavaScript, CSS: 
+        <ul>
+          <li>Projects on HTML, CSS, JS</li>
+          <li>Project of React JS, MongoDB, Express</li>
+          <li>Learn About Git & Pushed Projects </li>
+          <li>Deployment of website on Heroku and Github Page</li>
+        </ul> `,
+      ],
+    },
+    {
+      organization: 'Institute Of ABC',
+      title: `Computer Lab Incharge`,
+      date: 'April 2017 - March 2019',
+      details: [
+        `Working on <strong>Advance Diploma in Computer Application (ADCA)</strong> which include: 
+        <ul>
+          <li><strong>Microsoft Office</strong> (Word, Excel, Access, Powerpoint)</li>
+          <li><strong>Accounting</strong> (Tally ERP9 , Tally 7.0)</li>
+          <li><strong>Designing/Illustrations</strong> (Photoshop, Ilustrator, CoralDraw)</li>
         </ul> `,
       ],
     },
