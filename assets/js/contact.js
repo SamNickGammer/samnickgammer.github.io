@@ -65,7 +65,7 @@ function getIpAddr() {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': 'https://samnickgammer.github.io/'
     },
   })
     .then((res) => res.json())
