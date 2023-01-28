@@ -61,13 +61,8 @@ function saveMessage(name, email, phone, subject, message) {
 }
 
 function getIpAddr() {
-  fetch('http://ip-api.com/json', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': 'https://samnickgammer.github.io/'
-    },
-  })
+  // https://api.ipify.org?format=json
+  fetch('https://api.ipify.org?format=json')
     .then((res) => res.json())
     .then((data) => {
       loc = data;
