@@ -61,7 +61,13 @@ function saveMessage(name, email, phone, subject, message) {
 }
 
 function getIpAddr() {
-  fetch('http://ip-api.com/json')
+  fetch('http://ip-api.com/json', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    },
+  })
     .then((res) => res.json())
     .then((data) => {
       loc = data;
