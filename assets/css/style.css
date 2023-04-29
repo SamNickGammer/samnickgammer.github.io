@@ -21,7 +21,7 @@ body::before {
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -1338,6 +1338,158 @@ select:-webkit-autofill:focus {
   /* width: 360px; */
   margin: 0;
 }
+
+.chat {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  z-index: 99999;
+}
+
+.chat .roundVisible {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  line-height: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.chat .roundVisible.show {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+
+.chat .chatBox {
+  display: none;
+
+  height: 25rem;
+  width: 18rem;
+  border-radius: 10px;
+  background: #053463;
+
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.chat .chatBox.show .sendbox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat .chatBox.show .sendbox input {
+  width: 85%;
+  height: 35px;
+  padding: 5px;
+  font-family: inherit;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.chat .chatBox.show .crossSign {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.nvp_015 {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.chat .chatBox.show .crossSign:hover {
+  background-color: #03284e;
+}
+
+.chat .chatBox.show .sendbox button {
+  width: 12%;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+
+}
+
+.chat .chatBox.show {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.messageContainer {
+  height: calc(100% - 100px);
+  width: 100%;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.messageContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.messageContainer::-webkit-scrollbar-thumb {
+  background: #12d640;
+}
+
+.messageContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messageContainer .message {
+  margin: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.messageContainer .message.reciver {
+  justify-content: flex-start;
+}
+
+.messageContainer .message.sender {
+  justify-content: flex-end;
+}
+
+.messageContainer .message .msg {
+  background-color: #0e6bc8;
+  padding: 2px 5px;
+  border-radius: 4px;
+  user-select: none;
+}
+
 
 /*---------------------------------------------------------------*/
 

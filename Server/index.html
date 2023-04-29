@@ -100,10 +100,15 @@
                     </div>
                     <div id="mailsBodyData"></div>
                 </div>
+
                 <div id="chatPage" class="pageSlider">
                     <div class="mainChat">
-                        <div class="userList"></div>
-                        <div class="chatList">
+                        <div class="userList simpleScroll">
+                        </div>
+                        <div class="chatList ">
+                            <div class="messageList simpleScroll">
+
+                            </div>
                             <div class="bottomBarSend">
                                 <input type="text" class="textInput" placeholder="Reply To this">
                                 <button class="sendMessageBtn">
@@ -113,6 +118,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="boxModal" id="viewModal"></div>
@@ -144,6 +150,7 @@
 
     <!-- Loading JS File with Firebase -->
     <script src="../assets/js/login.js"></script>
+    <script src="../assets/js/liveChat.js"></script>
     <script src="./script.js"></script>
 </body>
 

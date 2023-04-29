@@ -34,8 +34,17 @@ logoutBtn.addEventListener('click', () => {
   firebase.auth().signOut();
   dataScreen.style.display = 'none';
   loginScreen.style.display = 'block';
+  window.location.reload();
 });
 
+//! -------------------------------------------- Login Time Checker -------------------------------------------
+
+// function loginTimeChecker() {
+//   var timeOut = setTimeout(() => {
+//     localStorage.setItem("userTimeOut", true);
+//   }, 300000);
+
+// }
 //! -------------------------------------------- Login State Chekcer --------------------------------------------
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
@@ -43,7 +52,7 @@ firebase.auth().onAuthStateChanged((user) => {
     loginScreen.style.display = 'none';
     dataScreen.style.display = 'flex';
     getDataFirebase();
-    console.log('Auth Sucess');
+    console.log('Auth Success');
   } else {
     console.log('No user is signed in');
     loginYourSelf();
@@ -132,7 +141,7 @@ function getDataFirebase() {
 }
 
 function addMailsToDOM(index, mail) {
-  console.log(mail);
+  // console.log(mail);
   mailsBodyData.innerHTML += `
                       <div class="mailItem">
                             <div style="display: flex;align-items: center;">
@@ -170,7 +179,7 @@ function addMailsToDOM(index, mail) {
 async function clickDelete(data) {
   const id = data.split('_')[1];
   var realTimeDataBase = firebase.database().ref(`contact/${id}`);
-  if (confirm("Really Want to delete! You can't Revocer it.")) {
+  if (confirm("Really Want to delete! You can't Recover it.")) {
     await realTimeDataBase.remove();
     // window.location.reload();
     closeModelSet();

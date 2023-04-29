@@ -4,9 +4,11 @@
   margin-top: 10px;
   align-self: center;
 }
+
 .fsz20 {
   font-size: 20px;
 }
+
 #dataScreen {
   display: none;
 }
@@ -20,6 +22,7 @@
   display: flex;
   align-items: center;
 }
+
 .sideNavBar {
   background: rgba(60, 60, 60, 0.4);
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
@@ -34,9 +37,11 @@
   justify-content: space-between;
   transition: width 0.5s ease;
 }
+
 .sideNavBar.show {
   width: 250px;
 }
+
 .sideContainer {
   background: rgba(60, 60, 60, 0.4);
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
@@ -51,13 +56,16 @@
 .sideContainer::-webkit-scrollbar {
   width: 5px;
 }
+
 .sideContainer::-webkit-scrollbar-track {
   background: #181818;
 }
+
 .sideContainer::-webkit-scrollbar-thumb {
   background: #58f6ff89;
   border-radius: 5px 0px 0px 5px;
 }
+
 .sideContainer::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -68,6 +76,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .accountBTN {
   height: 50px;
   width: 50px;
@@ -77,11 +86,13 @@
   margin-top: 1rem;
   overflow: hidden;
 }
+
 .accountBTN img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+
 .burgurMenu {
   margin-top: 2rem;
   cursor: pointer;
@@ -89,6 +100,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .menuClickBtn {
   position: relative;
   margin-top: 2rem;
@@ -97,22 +109,26 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .sliderControl {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 }
+
 .textsimple {
   margin-left: 1rem;
   transition: 1s ease;
 }
+
 .textSideBar {
   transition: display 1s ease-out;
   display: none;
   /* opacity: 0; */
   /* transition: 0.5s 0.5s ease; */
 }
+
 .textSideBar.show {
   display: block;
   /* opacity: 1; */
@@ -122,9 +138,11 @@
 .pageSlider {
   display: none;
 }
+
 .pageSlider.activePage {
   display: block;
 }
+
 .sideSelector {
   position: absolute;
   display: none;
@@ -133,13 +151,11 @@
   width: 30px;
   left: -25px;
   background: rgb(255, 169, 88);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 169, 88, 0.5550595238095238) 0%,
-    rgba(255, 190, 85, 0.1516981792717087) 39%,
-    rgba(255, 192, 73, 0.07046568627450978) 65%,
-    rgba(255, 166, 0, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 169, 88, 0.5550595238095238) 0%,
+      rgba(255, 190, 85, 0.1516981792717087) 39%,
+      rgba(255, 192, 73, 0.07046568627450978) 65%,
+      rgba(255, 166, 0, 0) 100%);
   /* background: rgba(88, 246, 255, 0.5);
   background: linear-gradient(
     90deg,
@@ -150,6 +166,7 @@
   ); */
   transition: 0.5s all ease-in;
 }
+
 .sideSelectorInner {
   height: 45px;
   width: 5px;
@@ -159,21 +176,22 @@
   /* background: rgb(88, 246, 255); */
   /* transition: 0.5s all ease-in; */
 }
+
 .menuClickBtn:hover .sideSelector {
   display: block;
 }
+
 .sideSelector.active {
   display: block !important;
 }
+
 .menuClickBtn:not(.menuClickBtn.active):hover .sideSelector {
   background: rgba(88, 246, 255, 0.5);
-  background: linear-gradient(
-    90deg,
-    rgba(88, 246, 255, 0.5550595238095238) 0%,
-    rgba(85, 134, 255, 0.1516981792717087) 39%,
-    rgba(83, 73, 255, 0.07046568627450978) 65%,
-    rgba(81, 0, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(88, 246, 255, 0.5550595238095238) 0%,
+      rgba(85, 134, 255, 0.1516981792717087) 39%,
+      rgba(83, 73, 255, 0.07046568627450978) 65%,
+      rgba(81, 0, 255, 0) 100%);
   /* background: rgb(255, 169, 88);
   background: linear-gradient(
     90deg,
@@ -184,11 +202,13 @@
   ); */
   transition: 0.5s all ease-in;
 }
+
 .menuClickBtn:not(.menuClickBtn.active):hover .sideSelectorInner {
   background: rgb(88, 246, 255);
   /* background: rgb(255, 169, 88); */
   /* transition: 0.5s all ease-in; */
 }
+
 #mailsBodyData {
   display: flex;
   flex-direction: column;
@@ -207,22 +227,26 @@
   align-items: center;
   padding: 0 20px;
 }
+
 .action {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .actionBtn {
   /* height: 30px; */
   position: absolute;
   width: 30px;
   cursor: pointer;
 }
+
 .actionBtn.delete {
   top: -28px;
   right: 0;
 }
+
 .actionBtn.reply {
   bottom: -34px;
   right: 0;
@@ -238,39 +262,42 @@
   transition: 0.5s all ease-in;
   border-radius: 5px 0px 0px 5px;
 }
+
 .actionBtn:hover .actionSelector {
   display: block;
 }
+
 .actionSelectorInner {
   height: 30px;
   width: 5px;
   border-radius: 5px;
   background: rgb(255, 169, 88);
 }
+
 .actionBtn.delete .actionSelector {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 88, 88, 0.555) 0%,
-    rgba(255, 85, 85, 0.152) 39%,
-    rgba(255, 73, 73, 0.07) 65%,
-    rgba(255, 0, 0, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 88, 88, 0.555) 0%,
+      rgba(255, 85, 85, 0.152) 39%,
+      rgba(255, 73, 73, 0.07) 65%,
+      rgba(255, 0, 0, 0) 100%);
 }
+
 .actionBtn.delete .actionSelectorInner {
   background: rgb(255, 94, 88);
 }
+
 .actionBtn.reply .actionSelector {
-  background: linear-gradient(
-    90deg,
-    rgba(88, 246, 255, 0.5550595238095238) 0%,
-    rgba(85, 134, 255, 0.1516981792717087) 39%,
-    rgba(83, 73, 255, 0.07046568627450978) 65%,
-    rgba(81, 0, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(88, 246, 255, 0.5550595238095238) 0%,
+      rgba(85, 134, 255, 0.1516981792717087) 39%,
+      rgba(83, 73, 255, 0.07046568627450978) 65%,
+      rgba(81, 0, 255, 0) 100%);
 }
+
 .actionBtn.reply .actionSelectorInner {
   background: rgb(88, 246, 255);
 }
+
 .mailItemImg {
   margin-right: 15px;
   height: 50px;
@@ -316,36 +343,42 @@
   overflow: hidden;
   font-size: 14px;
 }
+
 .subjectMail {
   text-overflow: ellipsis;
   max-width: 20rem;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .nameMail {
   text-overflow: ellipsis;
   max-width: 10rem;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .timeMail {
   text-overflow: ellipsis;
   max-width: 15rem;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .reloadAction {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 10px;
 }
+
 .reloadBtn {
   cursor: pointer;
   padding: 10px 20px 10px 20px;
   background: #1f1f1f;
   border-radius: 10px;
 }
+
 .boxModal {
   position: fixed;
   top: 50%;
@@ -368,9 +401,11 @@
   box-shadow: rgb(255 255 255 / 7%) 0px 0px 15px;
   padding: 25px;
 }
+
 .boxModal.active {
   transform: translate(-50%, -50%) scale(1);
 }
+
 #overlay {
   position: fixed;
   transition: 200ms ease-in-out;
@@ -382,36 +417,44 @@
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
+
 #overlay.active {
   opacity: 1;
   pointer-events: all;
 }
+
 .boxModalHeader {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 10px;
 }
+
 .boxModalHeaderClose {
   cursor: pointer;
   padding: 10px 20px 10px 20px;
   background: #1f1f1f;
   border-radius: 10px;
 }
+
 .subjectModalView {
   font-size: 16px;
   font-weight: 600;
 }
+
 .simpleScroll::-webkit-scrollbar {
   width: 0.5rem;
 }
+
 .simpleScroll::-webkit-scrollbar-track {
-  background: #121212;
+  background: none;
 }
+
 .simpleScroll::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 10px;
 }
+
 .simpleScroll::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -425,6 +468,7 @@
   /* height: 100%; */
   height: calc(100vh - 60px - 50px);
 }
+
 .userList {
   width: 20%;
   /* height: calc(100vh - 60px - 50px); */
@@ -434,6 +478,7 @@
   padding: 10px;
   overflow-y: auto;
 }
+
 .chatList {
   width: 79%;
   /* height: calc(100vh - 60px - 50px); */
@@ -441,9 +486,16 @@
   background-color: #1f1f1f;
   border-radius: 10px;
   padding: 10px;
-  overflow-y: auto;
   position: relative;
 }
+
+.messageList {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px - 50px - 90px);
+  overflow-y: auto;
+}
+
 .chatList .textInput {
   width: 95%;
   background-color: #2c2c2c;
@@ -458,6 +510,7 @@
   border: none;
   margin: 10px;
 }
+
 .chatList .sendMessageBtn {
   outline: none;
   border: none;
@@ -468,6 +521,7 @@
   padding: 15px;
   border-radius: 10px;
 }
+
 .bottomBarSend {
   position: absolute;
   bottom: 0;

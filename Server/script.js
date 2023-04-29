@@ -47,4 +47,3 @@ clickSection.forEach((section) => {
   });
 });
 
-/* --------------------- Function for Mail Page --------------------- */
