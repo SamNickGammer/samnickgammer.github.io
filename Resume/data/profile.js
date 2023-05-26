@@ -83,7 +83,7 @@ const profileData = {
       // link: 'https://github.com/SamNickGammer/samnickgammer.github.io',
       website: 'https://e-patra.com/',
       desc: `This is a ReactJS(Typescript) and NodeJS based Web Application to send emails to users.</br>
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
+      <div class='inacolomn' style="display:flex;justify-content:space-between;margin-top:10px;">
         <div>
           <strong>Application Include:</strong> <br>
           <ul>
@@ -169,11 +169,23 @@ const profileData = {
   ],
   experiences: [
     {
+      organization: 'BITCS',
+      title: `React/Nest Developer Intern`,
+      date: 'Feb 2023 - Currently',
+      details: [
+        `Working on <strong>Matrimonial Site</strong>.`,
+        `Completed training by completing following technology: 
+        <ul>
+          <li>GIT, Javascript, React JS with Hooks & Redux, CSS/SCSS, React Native, Coding Guidelines, NODE JS, Typescript, TypeORM, NestJS</li>
+        </ul> `,
+      ],
+    },
+    {
       organization: 'Aniworks Innovation Company',
       title: `Frontend Developer`,
-      date: 'May 2022 - Current',
+      date: 'Apr 2022 - Jan 2023',
       details: [
-        `Working on <strong>Email Extension Client or Email Service</strong> which include: 
+        `Worked on <strong>Email Extension Client or Email Service</strong> which include: 
         <ul>
           <li><strong>PGP Encryption</strong> That's allow to send encrypted mails.</li>
           <li><strong>Drive Service</strong> That's Store mail's data like attachments and Images in cloud storage.</li>

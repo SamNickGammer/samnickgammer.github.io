@@ -16,6 +16,10 @@ const setTitle = (data) => {
   // document.querySelector('#contactAddress').innerHTML =
   //   data.about.contact.address;
 
+  if(window.innerWidth < 800){
+    profileData.image.imageEnable = false;
+  }
+
   if (data.image.imageEnable) {
     const profileHeader = document.querySelector('.header');
     profileHeader.style.display = 'flex';
@@ -27,6 +31,14 @@ const setTitle = (data) => {
     const imgContainer = document.querySelector('.image-container');
     imgContainer.style.display = 'block';
     document.querySelector('#profileImage').src = data.image.src;
+  }else{
+    const profileHeader = document.querySelector('.header');
+    profileHeader.style.textAlign = 'center';
+    const aboutMe = document.querySelector('.about-me');
+    aboutMe.style.width = '';
+    const imgContainer = document.querySelector('.image-container');
+    imgContainer.style.display = 'none';
+    document.querySelector('#profileImage').src = '';
   }
 };
 
@@ -367,6 +379,15 @@ const setCatagoryHeader = (title) => {
   setEducation(profileData.education);
   setCertification(profileData.certifications);
   setEvents(profileData.events);
+  
+  if(window.innerWidth < 800){
+    const inCol = document.querySelector('.inacolomn');
+    inCol.style.flexDirection = 'column'
+  }else{
+    const inCol = document.querySelector('.inacolomn');
+    inCol.style.flexDirection = 'row'
+  }
+
 })();
 
 const profileName = document.getElementById('profileName');
@@ -382,3 +403,17 @@ profileName.addEventListener('click', () => {
     darkTheme = true;
   }
 });
+
+window.addEventListener('resize',()=>{
+  if(window.innerWidth < 800){
+    profileData.image.imageEnable = false;
+    const inCol = document.querySelector('.inacolomn');
+    inCol.style.flexDirection = 'column'
+  }
+  else{
+    profileData.image.imageEnable = true;
+    const inCol = document.querySelector('.inacolomn');
+    inCol.style.flexDirection = 'row'
+  }
+  setTitle(profileData);
+})
